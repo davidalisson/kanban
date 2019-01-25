@@ -61,6 +61,24 @@ export class MyServiceService {
   getBoard() {
     return this.board;
   }
+  deleteTodo(item) {
+    let obj;
+    obj = this.todo.find(x => x.nome === item.nome);
+    console.log('obj---------------------', obj);
+
+  }
+  deleteDoing(item) {
+    let obj;
+    obj = this.doing.find(x => x.nome === item.nome);
+    console.log('obj---------------------', obj);
+
+  }
+  deleteDone(item) {
+    let obj;
+    obj = this.done.find(x => x.nome === item.nome);
+    console.log('obj---------------------', obj);
+
+  }
 
   getCard(id) {
     return this.http.get(

@@ -41,18 +41,37 @@ export class BoardComponent implements OnInit {
     console.log(this.todo);
   }
 
-  openDialog(type) {
-
+  openDialog(type, item) {
+    console.log('item', item);
     const dialogConfig = new MatDialogConfig();
 
     dialogConfig.disableClose = true;
     dialogConfig.autoFocus = true;
 
+
+
     dialogConfig.data = {
-      type: type
+      type: type,
+      item: item
     };
 
     this.dialog.open(ModalAddComponent, dialogConfig);
+}
+
+deleteCardTodo(item) {
+  let obj;
+  obj = this.todo.find(x => x.nome === item.nome);
+  this.todo.splice(item, 1);
+}
+deleteCardDoing(item) {
+  let obj;
+  obj = this.doing.find(x => x.nome === item.nome);
+  this.doing.splice(item, 1);
+}
+deleteCardDone(item) {
+  let obj;
+  obj = this.done.find(x => x.nome === item.nome);
+  this.done.splice(item, 1);
 }
 
 
