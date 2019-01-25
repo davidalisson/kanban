@@ -16,7 +16,7 @@ import { ReactiveFormsModule } from '@angular/forms';
 import {MyServiceService} from './shared/services/my-service.service';
 import { HttpClientModule } from '@angular/common/http';
 
-import {MatButtonModule, MatInputModule, MatCheckboxModule, MatDialogModule, MatListModule} from '@angular/material';
+import {MatButtonModule, MatInputModule, MatCheckboxModule, MatDialogModule, MatListModule, MatToolbarModule} from '@angular/material';
 import { ModalAddBoardComponent } from './shared/modal-add-board/modal-add-board.component';
 
 @NgModule({
@@ -42,7 +42,8 @@ import { ModalAddBoardComponent } from './shared/modal-add-board/modal-add-board
     FormsModule,
     ReactiveFormsModule,
     HttpClientModule,
-    MatListModule
+    MatListModule,
+    MatToolbarModule
   ],
   providers: [
     ApiService,
@@ -52,7 +53,7 @@ import { ModalAddBoardComponent } from './shared/modal-add-board/modal-add-board
   [
     BrowserAnimationsModule, MatButtonModule, MatCheckboxModule, MatDialogModule,  FormsModule,
     ReactiveFormsModule, ModalAddComponent,
-    ModalRemoveComponent, ModalAddBoardComponent, MatListModule
+    ModalRemoveComponent, ModalAddBoardComponent, MatListModule, MatToolbarModule
   ],
   bootstrap: [AppComponent],
   entryComponents: [ModalAddComponent, ModalRemoveComponent, ModalAddBoardComponent]

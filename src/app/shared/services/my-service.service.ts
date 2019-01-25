@@ -83,9 +83,21 @@ export class MyServiceService {
       this.api.getOptions()
     );
   }
-  saveCard(id) {
+  saveCard(card) {
+    return this.http.post(
+      this.api.getBaseUrl() + 'card/save', card,
+      this.api.getOptions()
+    );
+  }
+  getBoards() {
     return this.http.get(
-      this.api.getBaseUrl() + 'card/save' + id,
+      this.api.getBaseUrl() + 'board/getAll',
+      this.api.getOptions()
+    );
+  }
+  SetBoards(board) {
+    return this.http.post(
+      this.api.getBaseUrl() + 'board/save', board,
       this.api.getOptions()
     );
   }

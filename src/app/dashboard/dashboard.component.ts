@@ -15,6 +15,7 @@ import { routerNgProbeToken } from '@angular/router/src/router_module';
 
 export class DashboardComponent implements OnInit {
 
+  imagem: any = 'assets/kanban.jpg';
 
   boards: [{}];
 

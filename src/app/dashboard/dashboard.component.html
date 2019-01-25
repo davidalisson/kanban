@@ -1,16 +1,25 @@
 <div class="tittle">
   <h1>Kanban</h1>
 </div>
+<table style="width:100%">
+  <tr>
+    <th>
+      <div class="board-container">
+        <mat-list role="list">
+          <div *ngFor="let board of boards" class="lane">
+            <mat-list-item role="listitem"> <button mat-stroked-button color="warn" style="width:200px" (click)="openBoard()">{{board.nome}}</button></mat-list-item>
+          </div>
+        </mat-list>
+      </div>
 
-<div class="board-container">
-  <mat-list role="list">
-    <div *ngFor="let board of boards" class="lane">
-      <mat-list-item role="listitem"> <button mat-stroked-button color="warn" style="width:200px" (click)="openBoard()">{{board.nome}}</button></mat-list-item>
-    </div>
-  </mat-list>
-</div>
 
+      <div class="button-add">
+        <button mat-raised-button style="margin-right: 30px" color="primary" (click)="openDialog()">Novo Quadro</button>
+      </div>
+    </th>
 
-<div class="button-add">
-  <button mat-raised-button flex="15" color="primary" (click)="openDialog()">Novo Quadro</button>
-</div>
+    <th>
+      <img class="img" [src]="imagem" alt="Kanban" style="width: 650px">
+    </th>
+  </tr>
+</table>
