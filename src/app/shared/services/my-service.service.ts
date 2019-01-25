@@ -10,18 +10,9 @@ export class MyServiceService {
 
 
 
-  todo: any = [{
-    nome: '',
-    descricao: ''
-  }];
-  doing: any = [{
-    nome: '',
-    descricao: ''
-  }];
-  done: any = [{
-    nome: '',
-    descricao: ''
-  }];
+  todo: any = [];
+  doing: any = [];
+  done: any = [];
 
   board: any = [{
     nome: ''

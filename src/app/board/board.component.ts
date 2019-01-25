@@ -28,6 +28,8 @@ export class BoardComponent implements OnInit {
 
   constructor(private dialog: MatDialog, private myService: MyServiceService) {
     this.todo = this.myService.getTodo();
+    this.doing = this.myService.getDoing();
+    this.done = this.myService.getDone();
   }
 
   ngOnInit() {
@@ -39,15 +41,21 @@ export class BoardComponent implements OnInit {
     console.log(this.todo);
   }
 
-  openDialog() {
+  openDialog(type) {
 
     const dialogConfig = new MatDialogConfig();
 
     dialogConfig.disableClose = true;
     dialogConfig.autoFocus = true;
 
+    dialogConfig.data = {
+      type: type
+    };
+
     this.dialog.open(ModalAddComponent, dialogConfig);
 }
+
+
   drop(event: CdkDragDrop<string[]>) {
     if (event.previousContainer === event.container) {
       moveItemInArray(event.container.data, event.previousIndex, event.currentIndex);

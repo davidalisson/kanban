@@ -21,7 +21,7 @@
 
       </div>
     </div>
-    <button mat-raised-button class="button-add" style="background-color: green;color: white; margin-top: 15px" (click)="openDialog()">Adicionar</button>
+    <button mat-raised-button class="button-add" style="background-color: green;color: white; margin-top: 15px" (click)="openDialog('todo')">Adicionar</button>
 
   </div>
 
@@ -38,16 +38,16 @@
 
 
           <mat-form-field class="example-full-width" style="margin-top: 40px; margin-left: -60px">
-              <input matInput placeholder="Título" value="{{item}}" >
+              <input matInput placeholder="Título" value="{{item.nome}}" >
             </mat-form-field>
 
 
         <mat-form-field class="example-full-width" style="margin-top: 40px;">
-              <input matInput placeholder="Descrição">
+              <input matInput placeholder="Descrição" value="{{item.descricao}}">
             </mat-form-field>
       </div>
     </div>
-    <button mat-raised-button class="button-add" style="background-color: green;color: white; margin-top: 15px" (click)="openDialog()">Adicionar</button>
+    <button mat-raised-button class="button-add" style="background-color: green;color: white; margin-top: 15px" (click)="openDialog('doing')">Adicionar</button>
   </div>
 
   <div class="container">
@@ -64,15 +64,15 @@
 
 
           <mat-form-field class="example-full-width" style="margin-top: 40px; margin-left: -60px">
-              <input matInput placeholder="Título" value="{{item}}" >
+              <input matInput placeholder="Título" value="{{item.nome}}" >
             </mat-form-field>
 
 
         <mat-form-field class="example-full-width" style="margin-top: 40px;">
-              <input matInput placeholder="Descrição">
+              <input matInput placeholder="Descrição" value="{{item.descricao}}">
             </mat-form-field>
       </div>
     </div>
-    <button mat-raised-button class="button-add" style="background-color: green;color: white; margin-top: 15px" (click)="openDialog()">Adicionar</button>
+    <button mat-raised-button class="button-add" style="background-color: green;color: white; margin-top: 15px" (click)="openDialog('done')">Adicionar</button>
   </div>
 </div>
