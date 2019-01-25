@@ -3,12 +3,12 @@
   <div class="board-container">
     <mat-list role="list">
       <div *ngFor="let board of boards" class="lane">
-          <mat-list-item role="listitem"> <button mat-stroked-button color="warn" (click)="openDialog()">{{board.nome}}</button></mat-list-item>
+          <mat-list-item role="listitem"> <button mat-stroked-button color="warn" (click)="openBoard()">{{board.nome}}</button></mat-list-item>
       </div>
     </mat-list>
   </div>
 
 
 
-<button mat-button (click)="openDialog()">Novo Quadro</button>
+<button mat-raised-button color="primary" (click)="openDialog()">Novo Quadro</button>
 </div>
