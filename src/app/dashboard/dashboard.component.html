@@ -1,10 +1,14 @@
-<div class="titlle"><h1>Boards</h1>
-<div class="lane-container">
-  <div *ngFor="let board of boards" class="lane">
-      <!-- <app-lane [data]="lane"></app-lane> -->
+<div class="titlle"><h1>Quadros</h1>
+
+  <div class="board-container">
+    <mat-list role="list">
+      <div *ngFor="let board of boards" class="lane">
+          <mat-list-item role="listitem"> <button mat-stroked-button color="warn" (click)="openDialog()">{{board.nome}}</button></mat-list-item>
+      </div>
+    </mat-list>
   </div>
-</div>
 
 
-<button mat-button (click)="''">Novo Quadro</button>
+
+<button mat-button (click)="openDialog()">Novo Quadro</button>
 </div>

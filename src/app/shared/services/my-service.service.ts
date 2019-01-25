@@ -23,7 +23,9 @@ export class MyServiceService {
     descricao: ''
   }];
 
-  board: any = [{}];
+  board: any = [{
+    nome: ''
+  }];
 
   private subject = new Subject<any>();
   private options: any;
