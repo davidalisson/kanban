@@ -1,0 +1,78 @@
+<div cdkDropListGroup>
+  <div class="container">
+    <h2>To do </h2>
+    <div
+      cdkDropList
+      [cdkDropListData]="todo"
+      class="example-list"
+      (cdkDropListDropped)="drop($event)">
+      <div class="example-box" *ngFor="let item of todo" cdkDrag>
+          <button mat-raised-button style="margin-left: -10px; margin-top: -100px" class="btn-edit"><i class="far fa-edit"></i> </button>
+
+
+          <mat-form-field class="example-full-width" style="margin-top: 40px; margin-left: -60px">
+              <input matInput placeholder="Título" value="{{item.nome}}" >
+            </mat-form-field>
+
+
+        <mat-form-field class="example-full-width" style="margin-top: 40px;">
+              <input matInput placeholder="Descrição" value="{{item.descricao}}">
+            </mat-form-field>
+
+      </div>
+    </div>
+    <button mat-raised-button class="button-add" style="background-color: green;color: white; margin-top: 15px" (click)="openDialog()">Adicionar</button>
+
+  </div>
+
+  <div class="container">
+    <h2>Doing</h2>
+
+    <div
+      cdkDropList
+      [cdkDropListData]="doing"
+      class="example-list"
+      (cdkDropListDropped)="drop($event)">
+      <div class="example-box" *ngFor="let item of doing" cdkDrag>
+          <button mat-raised-button style="margin-left: -10px; margin-top: -100px" class="btn-edit"><i class="far fa-edit"></i> </button>
+
+
+          <mat-form-field class="example-full-width" style="margin-top: 40px; margin-left: -60px">
+              <input matInput placeholder="Título" value="{{item}}" >
+            </mat-form-field>
+
+
+        <mat-form-field class="example-full-width" style="margin-top: 40px;">
+              <input matInput placeholder="Descrição">
+            </mat-form-field>
+      </div>
+    </div>
+    <button mat-raised-button class="button-add" style="background-color: green;color: white; margin-top: 15px" (click)="openDialog()">Adicionar</button>
+  </div>
+
+  <div class="container">
+    <h2>Done</h2>
+
+    <div
+      cdkDropList
+      [cdkDropListData]="done"
+      class="example-list"
+      (cdkDropListDropped)="drop($event)">
+      <div class="example-box" *ngFor="let item of done" cdkDrag>
+
+          <button mat-raised-button style="margin-left: -10px; margin-top: -100px" class="btn-edit"><i class="far fa-edit"></i> </button>
+
+
+          <mat-form-field class="example-full-width" style="margin-top: 40px; margin-left: -60px">
+              <input matInput placeholder="Título" value="{{item}}" >
+            </mat-form-field>
+
+
+        <mat-form-field class="example-full-width" style="margin-top: 40px;">
+              <input matInput placeholder="Descrição">
+            </mat-form-field>
+      </div>
+    </div>
+    <button mat-raised-button class="button-add" style="background-color: green;color: white; margin-top: 15px" (click)="openDialog()">Adicionar</button>
+  </div>
+</div>
