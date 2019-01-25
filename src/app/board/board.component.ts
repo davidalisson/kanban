@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import {CdkDragDrop, moveItemInArray, transferArrayItem} from '@angular/cdk/drag-drop';
-import {MatDialog, MatDialogConfig} from '@angular/material';
+import { CdkDragDrop, moveItemInArray, transferArrayItem } from '@angular/cdk/drag-drop';
+import { MatDialog, MatDialogConfig } from '@angular/material';
 import { ModalAddComponent } from '../shared/modal-add/modal-add.component';
 import { MyServiceService } from '../shared/services/my-service.service';
 @Component({
@@ -56,23 +56,23 @@ export class BoardComponent implements OnInit {
     };
 
     this.dialog.open(ModalAddComponent, dialogConfig);
-}
+  }
 
-deleteCardTodo(item) {
-  let obj;
-  obj = this.todo.find(x => x.nome === item.nome);
-  this.todo.splice(item, 1);
-}
-deleteCardDoing(item) {
-  let obj;
-  obj = this.doing.find(x => x.nome === item.nome);
-  this.doing.splice(item, 1);
-}
-deleteCardDone(item) {
-  let obj;
-  obj = this.done.find(x => x.nome === item.nome);
-  this.done.splice(item, 1);
-}
+  deleteCardTodo(item) {
+    let obj;
+    obj = this.todo.find(x => x.nome === item.nome);
+    this.todo.splice(item, 1);
+  }
+  deleteCardDoing(item) {
+    let obj;
+    obj = this.doing.find(x => x.nome === item.nome);
+    this.doing.splice(item, 1);
+  }
+  deleteCardDone(item) {
+    let obj;
+    obj = this.done.find(x => x.nome === item.nome);
+    this.done.splice(item, 1);
+  }
 
 
   drop(event: CdkDragDrop<string[]>) {
@@ -80,9 +80,9 @@ deleteCardDone(item) {
       moveItemInArray(event.container.data, event.previousIndex, event.currentIndex);
     } else {
       transferArrayItem(event.previousContainer.data,
-                        event.container.data,
-                        event.previousIndex,
-                        event.currentIndex);
+        event.container.data,
+        event.previousIndex,
+        event.currentIndex);
     }
   }
 

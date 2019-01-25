@@ -5,7 +5,7 @@ import { HttpClient, HttpHeaders } from '@angular/common/http';
 export class ApiService {
 
 
-  private url  = 'http://localhost:8080/Kanban/api/';
+  private url = 'http://localhost:8080/Kanban/api/';
 
   private options;
 

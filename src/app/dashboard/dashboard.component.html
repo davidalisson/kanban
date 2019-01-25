@@ -1,14 +1,16 @@
-<div class="titlle"><h1>Quadros</h1>
+<div class="tittle">
+  <h1>Kanban</h1>
+</div>
 
-  <div class="board-container">
-    <mat-list role="list">
-      <div *ngFor="let board of boards" class="lane">
-          <mat-list-item role="listitem"> <button mat-stroked-button color="warn" (click)="openBoard()">{{board.nome}}</button></mat-list-item>
-      </div>
-    </mat-list>
-  </div>
+<div class="board-container">
+  <mat-list role="list">
+    <div *ngFor="let board of boards" class="lane">
+      <mat-list-item role="listitem"> <button mat-stroked-button color="warn" style="width:200px" (click)="openBoard()">{{board.nome}}</button></mat-list-item>
+    </div>
+  </mat-list>
+</div>
 
 
-
-<button mat-raised-button color="primary" (click)="openDialog()">Novo Quadro</button>
+<div class="button-add">
+  <button mat-raised-button flex="15" color="primary" (click)="openDialog()">Novo Quadro</button>
 </div>

@@ -4,27 +4,27 @@ import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Subject } from 'rxjs';
 import { Observable } from 'rxjs';
 
-
 @Injectable()
 export class MyServiceService {
-
-
-
   todo: any = [];
   doing: any = [];
   done: any = [];
 
-  board: any = [{
-    nome: ''
-  }];
+  board: any = [
+    {
+      nome: ''
+    }
+  ];
 
   private subject = new Subject<any>();
   private options: any;
 
-  constructor(private api: ApiService,
-    private http: HttpClient) {
+  constructor(private api: ApiService, private http: HttpClient) {
     let headers = new HttpHeaders();
-    headers = headers.append('Content-Type', 'application/x-www-form-urlencoded; charset=UTF-8');
+    headers = headers.append(
+      'Content-Type',
+      'application/x-www-form-urlencoded; charset=UTF-8'
+    );
 
     this.options = {
       headers: headers
@@ -65,32 +65,30 @@ export class MyServiceService {
     let obj;
     obj = this.todo.find(x => x.nome === item.nome);
     console.log('obj---------------------', obj);
-
   }
   deleteDoing(item) {
     let obj;
     obj = this.doing.find(x => x.nome === item.nome);
     console.log('obj---------------------', obj);
-
   }
   deleteDone(item) {
     let obj;
     obj = this.done.find(x => x.nome === item.nome);
     console.log('obj---------------------', obj);
-
   }
 
   getCard(id) {
     return this.http.get(
       this.api.getBaseUrl() + 'card/getById' + id,
-      this.api.getOptions());
+      this.api.getOptions()
+    );
   }
   saveCard(id) {
     return this.http.get(
       this.api.getBaseUrl() + 'card/save' + id,
-      this.api.getOptions());
+      this.api.getOptions()
+    );
   }
-
 
   sendMessage(message: any) {
     this.subject.next(message);

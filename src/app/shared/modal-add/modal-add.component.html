@@ -2,22 +2,18 @@
 
 <mat-dialog-content>
 
-    <mat-form-field>
-        <input matInput
-                placeholder="Nome"
-                [(ngModel)]="card.nome">
-    </mat-form-field>
+  <mat-form-field>
+    <input matInput placeholder="Nome" [(ngModel)]="card.nome">
+  </mat-form-field>
 
-    <mat-form-field>
-      <input matInput
-              placeholder="Descrição"
-              [(ngModel)]="card.descricao">
+  <mat-form-field>
+    <input matInput placeholder="Descrição" [(ngModel)]="card.descricao">
   </mat-form-field>
 
 </mat-dialog-content>
 
 <mat-dialog-actions>
-    <button *ngIf="!editar" class="mat-raised-button"(click)="close()">Close</button>
-    <button *ngIf="!editar" class="mat-raised-button mat-primary"(click)="save()">Save</button>
-    <button *ngIf="editar" class="mat-raised-button mat-primary"(click)="save()">Close</button>
+  <button *ngIf="!editar" class="mat-raised-button" (click)="close()">Close</button>
+  <button *ngIf="!editar" class="mat-raised-button mat-primary" (click)="save()">Save</button>
+  <button *ngIf="editar" class="mat-raised-button mat-primary" (click)="save()">Close</button>
 </mat-dialog-actions>

@@ -1,25 +1,25 @@
-<div class="div-titulo"><h1>Quadro</h1></div>
+<div class="div-titulo">
+  <h1>Quadro</h1>
+</div>
 <div cdkDropListGroup>
   <div class="container">
     <h2>To do </h2>
-    <div
-      cdkDropList
-      [cdkDropListData]="todo"
-      class="example-list"
-      (cdkDropListDropped)="drop($event)">
+    <div cdkDropList [cdkDropListData]="todo" class="example-list" (cdkDropListDropped)="drop($event)">
       <div class="example-box" *ngFor="let item of todo" cdkDrag>
-          <button mat-raised-button style="margin-left: -10px; margin-top: -100px" class="btn-edit" (click)="openDialog('editTodo', item)"><i class="far fa-edit"></i> </button>
-          <button mat-raised-button style="margin-left: 10px; margin-top: -100px" class="btn-remove" (click)="deleteCardTodo(item)"><i class="far fa-trash-alt"></i></button>
+        <button mat-raised-button style="margin-left: -10px; margin-top: -100px" class="btn-edit" (click)="openDialog('editTodo', item)"><i
+            class="far fa-edit"></i> </button>
+        <button mat-raised-button style="margin-left: 10px; margin-top: -100px" class="btn-remove" (click)="deleteCardTodo(item)"><i
+            class="far fa-trash-alt"></i></button>
 
 
-          <mat-form-field class="example-full-width" style="margin-top: 40px; margin-left: -60px">
-              <input matInput placeholder="Título" value="{{item.nome}}" [readonly]="true">
-            </mat-form-field>
+        <mat-form-field class="example-full-width" style="margin-top: 40px; margin-left: -60px">
+          <input matInput placeholder="Título" value="{{item.nome}}" [readonly]="true">
+        </mat-form-field>
 
 
         <mat-form-field class="example-full-width" style="margin-top: 40px;">
-              <input matInput placeholder="Descrição" value="{{item.descricao}}" [readonly]="true">
-            </mat-form-field>
+          <input matInput placeholder="Descrição" value="{{item.descricao}}" [readonly]="true">
+        </mat-form-field>
 
       </div>
     </div>
@@ -30,24 +30,22 @@
   <div class="container">
     <h2>Doing</h2>
 
-    <div
-      cdkDropList
-      [cdkDropListData]="doing"
-      class="example-list"
-      (cdkDropListDropped)="drop($event)">
+    <div cdkDropList [cdkDropListData]="doing" class="example-list" (cdkDropListDropped)="drop($event)">
       <div class="example-box" *ngFor="let item of doing" cdkDrag>
-          <button mat-raised-button style="margin-left: -10px; margin-top: -100px" class="btn-edit" (click)="openDialog('editDoing', item)"><i class="far fa-edit"></i> </button>
-          <button mat-raised-button style="margin-left: 10px; margin-top: -100px" class="btn-remove" (click)="deleteCardDoing(item)"><i class="far fa-trash-alt"></i></button>
+        <button mat-raised-button style="margin-left: -10px; margin-top: -100px" class="btn-edit" (click)="openDialog('editDoing', item)"><i
+            class="far fa-edit"></i> </button>
+        <button mat-raised-button style="margin-left: 10px; margin-top: -100px" class="btn-remove" (click)="deleteCardDoing(item)"><i
+            class="far fa-trash-alt"></i></button>
 
 
-          <mat-form-field class="example-full-width" style="margin-top: 40px; margin-left: -60px">
-              <input matInput placeholder="Título" value="{{item.nome}}" [readonly]="true">
-            </mat-form-field>
+        <mat-form-field class="example-full-width" style="margin-top: 40px; margin-left: -60px">
+          <input matInput placeholder="Título" value="{{item.nome}}" [readonly]="true">
+        </mat-form-field>
 
 
         <mat-form-field class="example-full-width" style="margin-top: 40px;">
-              <input matInput placeholder="Descrição" value="{{item.descricao}}" [readonly]="true">
-            </mat-form-field>
+          <input matInput placeholder="Descrição" value="{{item.descricao}}" [readonly]="true">
+        </mat-form-field>
       </div>
     </div>
     <button mat-raised-button class="button-add" style="background-color: green;color: white; margin-top: 15px" (click)="openDialog('doing')">Adicionar</button>
@@ -56,25 +54,23 @@
   <div class="container">
     <h2>Done</h2>
 
-    <div
-      cdkDropList
-      [cdkDropListData]="done"
-      class="example-list"
-      (cdkDropListDropped)="drop($event)">
+    <div cdkDropList [cdkDropListData]="done" class="example-list" (cdkDropListDropped)="drop($event)">
       <div class="example-box" *ngFor="let item of done" cdkDrag>
 
-          <button mat-raised-button style="margin-left: -10px; margin-top: -100px" (click)="openDialog('editDone', item)" class="btn-edit"><i class="far fa-edit"></i> </button>
-          <button mat-raised-button style="margin-left: 10px; margin-top: -100px" class="btn-remove" (click)="deleteCardDone(item)"><i class="far fa-trash-alt"></i></button>
+        <button mat-raised-button style="margin-left: -10px; margin-top: -100px" (click)="openDialog('editDone', item)"
+          class="btn-edit"><i class="far fa-edit"></i> </button>
+        <button mat-raised-button style="margin-left: 10px; margin-top: -100px" class="btn-remove" (click)="deleteCardDone(item)"><i
+            class="far fa-trash-alt"></i></button>
 
 
-          <mat-form-field class="example-full-width" style="margin-top: 40px; margin-left: -60px">
-              <input matInput placeholder="Título" value="{{item.nome}}" [readonly]="true">
-            </mat-form-field>
+        <mat-form-field class="example-full-width" style="margin-top: 40px; margin-left: -60px">
+          <input matInput placeholder="Título" value="{{item.nome}}" [readonly]="true">
+        </mat-form-field>
 
 
         <mat-form-field class="example-full-width" style="margin-top: 40px;">
-              <input matInput placeholder="Descrição" value="{{item.descricao}}" [readonly]="true" >
-            </mat-form-field>
+          <input matInput placeholder="Descrição" value="{{item.descricao}}" [readonly]="true">
+        </mat-form-field>
       </div>
     </div>
     <button mat-raised-button class="button-add" style="background-color: green;color: white; margin-top: 15px" (click)="openDialog('done')">Adicionar</button>
